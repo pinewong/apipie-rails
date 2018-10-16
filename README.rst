@@ -854,7 +854,7 @@ Response validation
 
 The swagger definitions created by Apipie can be used to auto-generate clients that access the
 described APIs.  Those clients will break if the responses returned from the API do not match
-the declarations.  As such, it is very important to include unit tests that validate the actual
+the declarations.  As such, it is very important to include unit tests that the actual
 responses against the swagger definitions.
 
 The implemented mechanism provides two ways to include such validations in RSpec unit tests:
@@ -1154,7 +1154,7 @@ You must then call the ``apipie_validations`` method yourself, e.g.:
 
 .. code:: ruby
 
-   before_action: :apipie_validations
+   before_action :apipie_validations
 
 This is useful if you have before_actions which use parameter values: just add them
 after the ``apipie_validations`` before_action.
